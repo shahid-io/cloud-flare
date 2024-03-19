@@ -4,17 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "npx nodemon src/index",
+    "dev": "npx nodemon src/index",
+    "run": "nodemon --exec babel-node src/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.1",
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.18.3",
     "mysql": "^2.18.1",
+    "mysql2": "^3.9.2",
     "nodemon": "^3.1.0",
     "sequelize": "^6.37.1"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.23.9",
+    "@babel/plugin-transform-runtime": "^7.24.1",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.24.1",
+    "@babel/runtime": "^7.24.1",
+    "dotenv": "^16.4.5",
+    "sequelize-cli": "^6.6.2"
   }
 }
